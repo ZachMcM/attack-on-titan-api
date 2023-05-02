@@ -9,7 +9,7 @@ import { Organization } from "./types";
 import { Titan } from "./types";
 import { Request } from "express";
 
-const domain = "https://attackontitanapi.com";
+const dns = "https://api.attackontitanapi.com";
 const regex = /([&?])page=\d+/gi;
 const dataPerPage = 20;
 
@@ -52,9 +52,7 @@ export const buildResponse = (
   content: Character[] | Episode[] | Location[] | Organization[] | Titan[]
 ): DataResponse => {
   //formats a url string for the next and prev page properties
-  let url = `${domain}${req.originalUrl}`;
-
-  url = url.replace(regex, "");
+  let queriesString = req.originalUrl.replace(regex, "").replace(req.path, "");
 
   const pagesArr: any = [];
 
@@ -88,14 +86,14 @@ export const buildResponse = (
       response.results = pagesArr[pageIndex];
       //correctly setting the prev_page and next_page properties based on the current page
       if (pageNum <= pagesArr.length) {
-        response.info.next_page = `${url}&page=${pageNum + 1}`;
+        response.info.next_page = `${dns + req.path}?page=${pageNum + 1 + queriesString}`;
       }
       if (pageNum != 1) {
-        response.info.prev_page = `${url}&page=${pageNum - 1}`;
+        response.info.prev_page = `${dns + req.path}?page=${pageNum - 1 + queriesString}`;
       }
     } else {
       response.results = pagesArr[0];
-      response.info.next_page = `${url}&page=2`;
+      response.info.next_page = `${dns + req.path}?page=2${queriesString}`;
     }
   } else {
     response.results = pagesArr[0];
