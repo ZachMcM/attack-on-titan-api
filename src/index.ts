@@ -1,0 +1,210 @@
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+//type imports
+import { Character } from "./types";
+import { Episode } from "./types";
+import { Location } from "./types";
+import { Organization } from "./types";
+import { Titan } from "./types";
+
+//all methods needed for generating response
+import { buildResponse } from "./dataMethods";
+import { getResource } from "./dataMethods";
+import { filterByID } from "./dataMethods";
+
+const app = express();
+
+//default endpoints
+app.get("/api", (req, res) => {
+  res.json([
+    "https://attackontitanapi.com/api/characters",
+    "https://attackontitanapi.com/api/episodes",
+    "https://attackontitanapi.com/api/locations",
+    "https://attackontitanapi.com/api/organizations",
+    "https://attackontitanapi.com/api/titans",
+  ]);
+});
+
+//characters by id
+app.get("/api/characters/:id", (req, res) => {
+  let data = getResource("characters");
+  data = filterByID(req, data);
+  res.json(data);
+});
+
+//characters by query
+app.get("/api/characters", (req, res) => {
+  let characters: Character[] = getResource("characters");
+
+  if (req.query.name != undefined) {
+    characters = characters.filter((character: Character) =>
+      character.name.toLowerCase().includes(<string>req.query.name)
+    );
+  }
+  if (req.query.gender != undefined) {
+    characters = characters.filter(
+      (character: Character) =>
+        character.gender.toLowerCase() ==
+        (<string>req.query.gender).toLowerCase()
+    );
+  }
+  if (req.query.status != undefined) {
+    characters = characters.filter(
+      (character: Character) =>
+        character.status.toLowerCase() ==
+        (<string>req.query.status).toLowerCase()
+    );
+  }
+  if (req.query.occupation != undefined) {
+    characters = characters.filter(
+      (character: Character) =>
+        character.occupation.toLowerCase() ==
+        (<string>req.query.occupation).toLowerCase()
+    );
+  }
+
+  const response = buildResponse(req, characters);
+
+  res.json(response);
+});
+
+//episodes by id
+app.get("/api/episodes/:id", (req, res) => {
+  let data = getResource("episodes");
+  data = filterByID(req, data);
+  res.json(data);
+});
+
+//episodes by query
+app.get("/api/episodes", (req, res) => {
+  let episodes: Episode[] = getResource("episodes");
+
+  if (req.query.episode != undefined) {
+    episodes = episodes.filter((episode: Episode) =>
+      episode.episode
+        .toLowerCase()
+        .includes((<string>req.query.episode).toLowerCase())
+    );
+  }
+  if (req.query.name != undefined) {
+    episodes = episodes.filter((episode: Episode) =>
+      episode.name
+        .toLowerCase()
+        .includes((<string>req.query.name).toLowerCase())
+    );
+  }
+
+  const response = buildResponse(req, episodes);
+  res.json(response);
+});
+
+//locations by id
+app.get("/api/locations/:id", (req, res) => {
+  let data = getResource("locations");
+  data = filterByID(req, data);
+  res.json(data);
+});
+
+//locations by query
+app.get("/api/locations", (req, res) => {
+  let locations: Location[] = getResource("locations");
+
+  if (req.query.name != undefined) {
+    locations = locations.filter((location: Location) =>
+      location.name
+        .toLowerCase()
+        .includes((<string>req.query.name).toLowerCase())
+    );
+  }
+  if (req.query.territory != undefined) {
+    locations = locations.filter((location: Location) =>
+      location.territory
+        .toLowerCase()
+        .includes((<string>req.query.territory).toLowerCase())
+    );
+  }
+  if (req.query.region != undefined) {
+    locations = locations.filter((location: Location) =>
+      location.region
+        .toLowerCase()
+        .includes((<string>req.query.region).toLowerCase())
+    );
+  }
+
+  const response = buildResponse(req, locations);
+
+  res.json(response);
+});
+
+//organizations by id
+app.get("/api/organizations/:id", (req, res) => {
+  let data = getResource("organizations");
+  data = filterByID(req, data);
+  res.json(data);
+});
+
+//organizations by query
+app.get("/api/organizations", (req, res) => {
+  let organizations: Organization[] = getResource("organizations");
+
+  if (req.query.name != undefined) {
+    organizations = organizations.filter((organization: Organization) =>
+      organization.name
+        .toLowerCase()
+        .includes((<string>req.query.name).toLowerCase())
+    );
+  }
+  if (req.query.affiliation != undefined) {
+    organizations = organizations.filter((organization: Organization) =>
+      organization.affiliation
+        .toLowerCase()
+        .includes((<string>req.query.affiliation).toLowerCase())
+    );
+  }
+
+  const response = buildResponse(req, organizations);
+
+  res.json(response);
+});
+
+//titans by id
+app.get("/api/titans/:id", (req, res) => {
+  let data = getResource("titans");
+  data = filterByID(req, data);
+  res.json(data);
+});
+
+//titans by query
+app.get("/api/titans", (req, res) => {
+  let titans: Titan[] = getResource("titans");
+  const filteredTitans: Titan[] = [];
+
+  //only way to filter titans is by allegiance, we have to search through the allegiance array of every Titan object
+  if (req.query.allegiance != undefined) {
+    const allegianceArr = (<string>req.query.allegiance).split(",");
+    for (const titan of titans) {
+      for (let i = 0; i < titan.allegiance.length; i++) {
+        for (let j = 0; j < allegianceArr.length; j++) {
+          if (
+            titan.allegiance[i]
+              .toLowerCase()
+              .includes(allegianceArr[j].toLowerCase())
+          ) {
+            filteredTitans.push(titan);
+          }
+        }
+      }
+    }
+  }
+
+  const response = buildResponse(req, filteredTitans);
+
+  res.json(response);
+});
+
+app.listen(process.env.PORT, () => {
+  console.log(`App running on port ${process.env.PORT}`);
+});

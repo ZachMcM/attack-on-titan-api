@@ -1,0 +1,105 @@
+import * as fs from "node:fs";
+
+//all of our types
+import { DataResponse } from "./types";
+import { Character } from "./types";
+import { Episode } from "./types";
+import { Location } from "./types";
+import { Organization } from "./types";
+import { Titan } from "./types";
+import { Request } from "express";
+
+const domain = "https://attackontitanapi.com";
+const regex = /([&?])page=\d+/gi;
+const dataPerPage = 20;
+
+//returns the array of objects for the specified file
+export const getResource = (file: string) => {
+  const data = fs.readFileSync(`data/${file}.json`, "utf-8");
+  return JSON.parse(data);
+};
+
+//method for getting resource by id param
+export const filterByID = (
+  req: Request,
+  resourceData: Character[] | Episode[] | Location[] | Organization[] | Titan[]
+): Character[] | Episode[] | Location[] | Organization[] | Titan[] => {
+  //loops through each array and adds to the filtered array only if the ids match
+  const filteredResourceArr:
+    | Character[]
+    | Episode[]
+    | Location[]
+    | Organization[]
+    | Titan[] = [];
+
+  //if users want multiple characters they split the ids by commas and we split this into an array
+  const idArr = req.params.id.split(",");
+  for (let i = 0; i < resourceData.length; i++) {
+    for (let j = 0; j < idArr.length; j++) {
+      if (resourceData[i].id == parseInt(idArr[j])) {
+        filteredResourceArr[i] = resourceData[i];
+      }
+    }
+  }
+
+  return filteredResourceArr;
+};
+
+//creates the response object
+export const buildResponse = (
+  //takes in the query and the resource array
+  req: Request,
+  content: Character[] | Episode[] | Location[] | Organization[] | Titan[]
+): DataResponse => {
+  //formats a url string for the next and prev page properties
+  let url = `${domain}${req.originalUrl}`;
+
+  url = url.replace(regex, "");
+
+  const pagesArr: any = [];
+
+  //the object that is returned default values are 0, 0, null, and null, and an empty array
+  const response: DataResponse = {
+    info: {
+      count: 0,
+      pages: 0,
+      next_page: null,
+      prev_page: null,
+    },
+    results: [],
+  };
+
+  response.info.count = content.length;
+
+  //splits the resource array into an array of sub arrays with a max length of specified number
+  for (let i = 0; i < content.length; i += dataPerPage) {
+    const subArr = content.slice(i, i + dataPerPage);
+    pagesArr.push(subArr);
+  }
+
+  response.info.pages = pagesArr.length;
+
+  //if the pagesArr has more than one page then we need to set all the values of the DataResponse object
+  if (pagesArr.length > 1) {
+    //check if the user queried for a specific page if not we return the first page
+    if (req.query.page != undefined) {
+      const pageNum = parseInt(<string>req.query.page);
+      const pageIndex = pageNum - 1;
+      response.results = pagesArr[pageIndex];
+      //correctly setting the prev_page and next_page properties based on the current page
+      if (pageNum <= pagesArr.length) {
+        response.info.next_page = `${url}&page=${pageNum + 1}`;
+      }
+      if (pageNum != 1) {
+        response.info.prev_page = `${url}&page=${pageNum - 1}`;
+      }
+    } else {
+      response.results = pagesArr[0];
+      response.info.next_page = `${url}&page=2`;
+    }
+  } else {
+    response.results = pagesArr[0];
+  }
+
+  return response;
+};

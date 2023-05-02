@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "name": "Anti-Marleyan Volunteers",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/3/36/Anti-Marleyan_Volunteers_%28Anime%29.jpeg/revision/latest/scale-to-width-down/350?cb=20210211153018",
+    "occupations": [],
+    "notable_members": ["https://attackontitanapi.com/api/characters/183"],
+    "notable_former_members": [],
+    "affiliation": null,
+    "debut": "https://attackontitanapi.com/api/episodes/68"
+  },
+  {
+    "id": 2,
+    "name": "Berg Newspapers",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/d/de/Flegel_pressures_Roy_to_publish_the_truth.png/revision/latest/scale-to-width-down/350?cb=20190714091248",
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Royal Government",
+    "debut": "https://attackontitanapi.com/api/episodes/41"
+  },
+  {
+    "id": 3,
+    "name": "Cadet Corps",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/a/a9/104th_Trainees_Squad_Logo.png/revision/latest/scale-to-width-down/350?cb=20160506144854",
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Scout Regiment",
+    "debut": "https://attackontitanapi.com/api/episodes/2"
+  },
+  {
+    "id": 4,
+    "name": "Garrison Regiment",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/5/55/Garrison_Logo.png/revision/latest/scale-to-width-down/350?cb=20140307090257",
+    "occupations": [
+      "Guarding and maintaining the Walls",
+      "Handle civilian evacuation",
+      "Manning/Cleaning/Fixing the cannons on the Wall",
+      "Charge of refueling, ammunition, and other aiding jobs"
+    ],
+    "notable_members": [
+      "https://attackontitanapi.com/api/characters/61",
+      "https://attackontitanapi.com/api/characters/62",
+      "https://attackontitanapi.com/api/characters/60"
+    ],
+    "notable_former_members": [],
+    "affiliation": "Military",
+    "debut": "https://attackontitanapi.com/api/episodes/1"
+  },
+  {
+    "id": 5,
+    "name": "Global Alliance",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/9/93/Global_Alliance_Navy.png/revision/latest/scale-to-width-down/350?cb=20220403223102",
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": null,
+    "debut": "https://attackontitanapi.com/api/episodes/69"
+  },
+  {
+    "id": 6,
+    "name": "Jaegerists",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/0/05/Jaegerists_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20210228232109",
+    "occupations": [],
+    "notable_members": [
+      "https://attackontitanapi.com/api/characters/194",
+      "https://attackontitanapi.com/api/characters/195",
+      "https://attackontitanapi.com/api/characters/192",
+      "https://attackontitanapi.com/api/characters/189"
+    ],
+    "notable_former_members": [],
+    "affiliation": null,
+    "debut": "https://attackontitanapi.com/api/episodes/71"
+  },
+  {
+    "id": 7,
+    "name": "Marley Public Security",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/e/e8/The_authorities_corner_Ymir.png/revision/latest/scale-to-width-down/350?cb=20170827054750",
+    "occupations": [
+      "Maintain public order and containment of the internment zone",
+      "Suppression of dissents"
+    ],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Marley",
+    "debut": "https://attackontitanapi.com/api/episodes/35"
+  },
+  {
+    "id": 8,
+    "name": "Marleyan military",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/6/67/Marley%27s_Top_Brass.png/revision/latest/scale-to-width-down/350?cb=20210122181114",
+    "occupations": [],
+    "notable_members": [
+      "https://attackontitanapi.com/api/characters/86",
+      "https://attackontitanapi.com/api/characters/87",
+      "https://attackontitanapi.com/api/characters/88"
+    ],
+    "notable_former_members": [],
+    "affiliation": "Warriors",
+    "debut": "https://attackontitanapi.com/api/episodes/60"
+  },
+  {
+    "id": 9,
+    "name": "Military",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/8/86/Military.png/revision/latest/scale-to-width-down/350?cb=20170823064044",
+    "occupations": [],
+    "notable_members": ["https://attackontitanapi.com/api/characters/1"],
+    "notable_former_members": [],
+    "affiliation": "Jaegerists",
+    "debut": "https://attackontitanapi.com/api/episodes/1"
+  },
+  {
+    "id": 10,
+    "name": "Military Police Regiment",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/4/4c/Brigade_Logo.png/revision/latest/scale-to-width-down/350?cb=20140307090257",
+    "occupations": [
+      "Personal guard of the Queen",
+      "Police within Wall territory",
+      "Supervising of the Cadet Corps",
+      "Monitoring the Garrison",
+      "Directing fire-fighting operations."
+    ],
+    "notable_members": ["https://attackontitanapi.com/api/characters/51"],
+    "notable_former_members": [],
+    "affiliation": "Military",
+    "debut": "https://attackontitanapi.com/api/episodes/3"
+  },
+  {
+    "id": 11,
+    "name": "Order of the Walls",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/9/90/Order_of_the_Walls_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20180923200335",
+    "occupations": [
+      "Offering worship to the three Walls",
+      "Keep the true nature of the Walls secret from the public (secret motive)"
+    ],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Royal Government",
+    "debut": "https://attackontitanapi.com/api/episodes/1"
+  },
+  {
+    "id": 12,
+    "name": "Reeves Company",
+    "img": null,
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Military Police Regiment",
+    "debut": "https://attackontitanapi.com/api/episodes/2"
+  },
+  {
+    "id": 13,
+    "name": "Restorationists",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/e/ee/Restorationists_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20190710195733",
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": null,
+    "debut": "https://attackontitanapi.com/api/episodes/57"
+  },
+  {
+    "id": 14,
+    "name": "Royal Government",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/6/66/Historia_and_Zachary_preside_a_meeting.png/revision/latest/scale-to-width-down/350?cb=20190714095658",
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Eldia",
+    "debut": "https://attackontitanapi.com/api/episodes/38"
+  },
+  {
+    "id": 15,
+    "name": "Scout Regiment",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/a/a7/Survey_Corps_Logo.png/revision/latest/scale-to-width-down/350?cb=20140307090257",
+    "occupations": [
+      "Outside exploration",
+      "Human expansion and reclaiming territory from the Titan",
+      "Titan research",
+      "Front line fighters against the Titans",
+      "Eldian military's main expeditionary force against Marley"
+    ],
+    "notable_members": [
+      "https://attackontitanapi.com/api/characters/2",
+      "https://attackontitanapi.com/api/characters/1",
+      "https://attackontitanapi.com/api/characters/5",
+      "https://attackontitanapi.com/api/characters/3",
+      "https://attackontitanapi.com/api/characters/4"
+    ],
+    "notable_former_members": [],
+    "affiliation": "Military",
+    "debut": "https://attackontitanapi.com/api/episodes/1"
+  },
+  {
+    "id": 16,
+    "name": "Titan Biology Research Society",
+    "img": null,
+    "occupations": [],
+    "notable_members": [],
+    "notable_former_members": [],
+    "affiliation": "Marley",
+    "debut": "https://attackontitanapi.com/api/episodes/74"
+  },
+  {
+    "id": 17,
+    "name": "Warriors",
+    "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/4/4f/Warriors_%28854%29.png/revision/latest/scale-to-width-down/350?cb=20220321040257",
+    "occupations": [
+      "Serving as the main force as Marleyan military's main ground assault unit ground-based warfare",
+      "Titan Warriors act as the main assault force in ground-based combat",
+      "Acted as spies in the Paradis Island Operation."
+    ],
+    "notable_members": [
+      "https://attackontitanapi.com/api/characters/86",
+      "https://attackontitanapi.com/api/characters/87",
+      "https://attackontitanapi.com/api/characters/88",
+      "https://attackontitanapi.com/api/characters/89"
+    ],
+    "notable_former_members": [],
+    "affiliation": "Marleyan military",
+    "debut": "https://attackontitanapi.com/api/episodes/29"
+  }
+]
