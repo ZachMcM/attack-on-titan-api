@@ -25,7 +25,12 @@ app.get("/", (req, res) => {
 app.get("/characters/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("characters");
     data = (0, dataMethods_3.filterByID)(req, data);
-    res.json(data[0]);
+    if (data.length == 1) {
+        res.json(data[0]);
+    }
+    else {
+        res.json(data);
+    }
 });
 //characters by query
 app.get("/characters", (req, res) => {
@@ -62,7 +67,12 @@ app.get("/characters", (req, res) => {
 app.get("/episodes/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("episodes");
     data = (0, dataMethods_3.filterByID)(req, data);
-    res.json(data[0]);
+    if (data.length == 1) {
+        res.json(data[0]);
+    }
+    else {
+        res.json(data);
+    }
 });
 //episodes by query
 app.get("/episodes", (req, res) => {
@@ -84,7 +94,12 @@ app.get("/episodes", (req, res) => {
 app.get("/locations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("locations");
     data = (0, dataMethods_3.filterByID)(req, data);
-    res.json(data[0]);
+    if (data.length == 1) {
+        res.json(data[0]);
+    }
+    else {
+        res.json(data);
+    }
 });
 //locations by query
 app.get("/locations", (req, res) => {
@@ -119,7 +134,12 @@ app.get("/locations", (req, res) => {
 app.get("/organizations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("organizations");
     data = (0, dataMethods_3.filterByID)(req, data);
-    res.json(data[0]);
+    if (data.length == 1) {
+        res.json(data[0]);
+    }
+    else {
+        res.json(data);
+    }
 });
 //organizations by query
 app.get("/organizations", (req, res) => {
@@ -145,7 +165,12 @@ app.get("/organizations", (req, res) => {
 app.get("/titans/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("titans");
     data = (0, dataMethods_3.filterByID)(req, data);
-    res.json(data[0]);
+    if (data.length == 1) {
+        res.json(data[0]);
+    }
+    else {
+        res.json(data);
+    }
 });
 //titans by query
 app.get("/titans", (req, res) => {
