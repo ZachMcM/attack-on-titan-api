@@ -16,7 +16,7 @@
     "id": 2,
     "name": "Founding Titan",
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/3/3a/Eren_Jaeger_%28Anime%29_character_image_%28Founding_Titan%29.png/revision/latest/scale-to-width-down/350?cb=20220404091959",
-    "height": null,
+    "height": "350m",
     "abilities": [
       "Titan creation",
       "Titan behavioral control",
