@@ -7,6 +7,8 @@ The API offers various endpoints to query for information about different aspect
 
 **URL**: [https://api.attackontitanapi.com/](https://api.attackontitanapi.com/)
 
+- `/` (base url): Responds with an object of all the available endpoints
+
 - `/characters`: Retrieve information about characters from the series, including their name, image, age, gender, affiliation, and other details.
 
 - `/episodes`: Get details about episodes from the series, such as their name, image, characters, and other details.
