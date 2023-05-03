@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
     locations: "https://api.attackontitanapi.com/locations",
     organizations: "https://api.attackontitanapi.com/organizations",
     titans: "https://api.attackontitanapi.com/titans",
-});
+  });
 });
 
 //characters by id
@@ -36,7 +36,8 @@ app.get("/characters/:id", (req, res) => {
     res.json(data[0]);
   } else {
     res.json(data);
-  }});
+  }
+});
 
 //characters by query
 app.get("/characters", (req, res) => {
@@ -44,36 +45,40 @@ app.get("/characters", (req, res) => {
 
   if (req.query.name != undefined) {
     characters = characters.filter((character: Character) =>
-      character.name.toLowerCase().includes(<string>req.query.name)
+      character.name
+        .toLowerCase()
+        .includes((<string>req.query.name).toLowerCase())
     );
   }
   if (req.query.gender != undefined) {
-    characters = characters.filter(
-      (character: Character) => {
-        if (character.gender != null) {
-          return character.gender.toLowerCase() == (<string>req.query.gender).toLowerCase()
-        }
+    characters = characters.filter((character: Character) => {
+      if (character.gender != null) {
+        return (
+          character.gender.toLowerCase() ==
+          (<string>req.query.gender).toLowerCase()
+        );
       }
-    );
+    });
   }
   if (req.query.status != undefined) {
-    characters = characters.filter(
-      (character: Character) => {
-        if (character.status != null) {
-          return character.status.toLowerCase() == (<string>req.query.status).toLowerCase()
-        }
+    characters = characters.filter((character: Character) => {
+      if (character.status != null) {
+        return (
+          character.status.toLowerCase() ==
+          (<string>req.query.status).toLowerCase()
+        );
       }
-    );
+    });
   }
   if (req.query.occupation != undefined) {
-    characters = characters.filter(
-      (character: Character) => {
-        if (character.occupation != null) {
-          return character.occupation.toLowerCase() ==
+    characters = characters.filter((character: Character) => {
+      if (character.occupation != null) {
+        return (
+          character.occupation.toLowerCase() ==
           (<string>req.query.occupation).toLowerCase()
-        }
+        );
       }
-    );
+    });
   }
 
   const response = buildResponse(req, characters);
@@ -123,7 +128,8 @@ app.get("/locations/:id", (req, res) => {
     res.json(data[0]);
   } else {
     res.json(data);
-  }});
+  }
+});
 
 //locations by query
 app.get("/locations", (req, res) => {
@@ -140,21 +146,19 @@ app.get("/locations", (req, res) => {
     locations = locations.filter((location: Location) => {
       if (location.territory != null) {
         return location.territory
-        .toLowerCase()
-        .includes((<string>req.query.territory).toLowerCase())
+          .toLowerCase()
+          .includes((<string>req.query.territory).toLowerCase());
       }
-    }
-    );
+    });
   }
   if (req.query.region != undefined) {
     locations = locations.filter((location: Location) => {
       if (location.region != null) {
         return location.region
-        .toLowerCase()
-        .includes((<string>req.query.region).toLowerCase())
+          .toLowerCase()
+          .includes((<string>req.query.region).toLowerCase());
       }
-    }
-    );
+    });
   }
 
   const response = buildResponse(req, locations);
@@ -170,7 +174,8 @@ app.get("/organizations/:id", (req, res) => {
     res.json(data[0]);
   } else {
     res.json(data);
-  }});
+  }
+});
 
 //organizations by query
 app.get("/organizations", (req, res) => {
@@ -187,11 +192,10 @@ app.get("/organizations", (req, res) => {
     organizations = organizations.filter((organization: Organization) => {
       if (organization.affiliation != null) {
         return organization.affiliation
-        .toLowerCase()
-        .includes((<string>req.query.affiliation).toLowerCase())
+          .toLowerCase()
+          .includes((<string>req.query.affiliation).toLowerCase());
       }
-    }
-    );
+    });
   }
 
   const response = buildResponse(req, organizations);
@@ -207,7 +211,8 @@ app.get("/titans/:id", (req, res) => {
     res.json(data[0]);
   } else {
     res.json(data);
-  }});
+  }
+});
 
 //titans by query
 app.get("/titans", (req, res) => {

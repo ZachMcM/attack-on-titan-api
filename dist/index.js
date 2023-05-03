@@ -36,27 +36,31 @@ app.get("/characters/:id", (req, res) => {
 app.get("/characters", (req, res) => {
     let characters = (0, dataMethods_2.getResource)("characters");
     if (req.query.name != undefined) {
-        characters = characters.filter((character) => character.name.toLowerCase().includes(req.query.name));
+        characters = characters.filter((character) => character.name
+            .toLowerCase()
+            .includes(req.query.name.toLowerCase()));
     }
     if (req.query.gender != undefined) {
         characters = characters.filter((character) => {
             if (character.gender != null) {
-                return character.gender.toLowerCase() == req.query.gender.toLowerCase();
+                return (character.gender.toLowerCase() ==
+                    req.query.gender.toLowerCase());
             }
         });
     }
     if (req.query.status != undefined) {
         characters = characters.filter((character) => {
             if (character.status != null) {
-                return character.status.toLowerCase() == req.query.status.toLowerCase();
+                return (character.status.toLowerCase() ==
+                    req.query.status.toLowerCase());
             }
         });
     }
     if (req.query.occupation != undefined) {
         characters = characters.filter((character) => {
             if (character.occupation != null) {
-                return character.occupation.toLowerCase() ==
-                    req.query.occupation.toLowerCase();
+                return (character.occupation.toLowerCase() ==
+                    req.query.occupation.toLowerCase());
             }
         });
     }
