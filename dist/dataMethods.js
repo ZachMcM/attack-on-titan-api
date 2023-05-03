@@ -25,7 +25,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildResponse = exports.filterByID = exports.getResource = void 0;
 const fs = __importStar(require("node:fs"));
-const domain = "https://attackontitanapi.com";
+const dns = "https://api.attackontitanapi.com";
 const regex = /([&?])page=\d+/gi;
 const dataPerPage = 20;
 //returns the array of objects for the specified file
@@ -55,8 +55,7 @@ const buildResponse = (
 //takes in the query and the resource array
 req, content) => {
     //formats a url string for the next and prev page properties
-    let url = `${domain}${req.originalUrl}`;
-    url = url.replace(regex, "");
+    let queriesString = req.originalUrl.replace(regex, "").replace(req.path, "");
     const pagesArr = [];
     //the object that is returned default values are 0, 0, null, and null, and an empty array
     const response = {
@@ -84,15 +83,15 @@ req, content) => {
             response.results = pagesArr[pageIndex];
             //correctly setting the prev_page and next_page properties based on the current page
             if (pageNum <= pagesArr.length) {
-                response.info.next_page = `${url}&page=${pageNum + 1}`;
+                response.info.next_page = `${dns + req.path}?page=${pageNum + 1 + queriesString}`;
             }
             if (pageNum != 1) {
-                response.info.prev_page = `${url}&page=${pageNum - 1}`;
+                response.info.prev_page = `${dns + req.path}?page=${pageNum - 1 + queriesString}`;
             }
         }
         else {
             response.results = pagesArr[0];
-            response.info.next_page = `${url}&page=2`;
+            response.info.next_page = `${dns + req.path}?page=2${queriesString}`;
         }
     }
     else {

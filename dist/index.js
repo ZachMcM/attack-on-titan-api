@@ -12,50 +12,60 @@ const dataMethods_2 = require("./dataMethods");
 const dataMethods_3 = require("./dataMethods");
 const app = (0, express_1.default)();
 //default endpoints
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
     res.json([
-        "https://attackontitanapi.com/api/characters",
-        "https://attackontitanapi.com/api/episodes",
-        "https://attackontitanapi.com/api/locations",
-        "https://attackontitanapi.com/api/organizations",
-        "https://attackontitanapi.com/api/titans",
+        "https://api.attackontitanapi.com/characters",
+        "https://api.attackontitanapi.com/episodes",
+        "https://api.attackontitanapi.com/locations",
+        "https://api.attackontitanapi.com/organizations",
+        "https://api.attackontitanapi.com/titans",
     ]);
 });
 //characters by id
-app.get("/api/characters/:id", (req, res) => {
+app.get("/characters/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("characters");
     data = (0, dataMethods_3.filterByID)(req, data);
     res.json(data);
 });
 //characters by query
-app.get("/api/characters", (req, res) => {
+app.get("/characters", (req, res) => {
     let characters = (0, dataMethods_2.getResource)("characters");
     if (req.query.name != undefined) {
         characters = characters.filter((character) => character.name.toLowerCase().includes(req.query.name));
     }
     if (req.query.gender != undefined) {
-        characters = characters.filter((character) => character.gender.toLowerCase() ==
-            req.query.gender.toLowerCase());
+        characters = characters.filter((character) => {
+            if (character.gender != null) {
+                return character.gender.toLowerCase() == req.query.gender.toLowerCase();
+            }
+        });
     }
     if (req.query.status != undefined) {
-        characters = characters.filter((character) => character.status.toLowerCase() ==
-            req.query.status.toLowerCase());
+        characters = characters.filter((character) => {
+            if (character.status != null) {
+                return character.status.toLowerCase() == req.query.status.toLowerCase();
+            }
+        });
     }
     if (req.query.occupation != undefined) {
-        characters = characters.filter((character) => character.occupation.toLowerCase() ==
-            req.query.occupation.toLowerCase());
+        characters = characters.filter((character) => {
+            if (character.occupation != null) {
+                return character.occupation.toLowerCase() ==
+                    req.query.occupation.toLowerCase();
+            }
+        });
     }
     const response = (0, dataMethods_1.buildResponse)(req, characters);
     res.json(response);
 });
 //episodes by id
-app.get("/api/episodes/:id", (req, res) => {
+app.get("/episodes/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("episodes");
     data = (0, dataMethods_3.filterByID)(req, data);
     res.json(data);
 });
 //episodes by query
-app.get("/api/episodes", (req, res) => {
+app.get("/episodes", (req, res) => {
     let episodes = (0, dataMethods_2.getResource)("episodes");
     if (req.query.episode != undefined) {
         episodes = episodes.filter((episode) => episode.episode
@@ -71,13 +81,13 @@ app.get("/api/episodes", (req, res) => {
     res.json(response);
 });
 //locations by id
-app.get("/api/locations/:id", (req, res) => {
+app.get("/locations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("locations");
     data = (0, dataMethods_3.filterByID)(req, data);
     res.json(data);
 });
 //locations by query
-app.get("/api/locations", (req, res) => {
+app.get("/locations", (req, res) => {
     let locations = (0, dataMethods_2.getResource)("locations");
     if (req.query.name != undefined) {
         locations = locations.filter((location) => location.name
@@ -85,26 +95,34 @@ app.get("/api/locations", (req, res) => {
             .includes(req.query.name.toLowerCase()));
     }
     if (req.query.territory != undefined) {
-        locations = locations.filter((location) => location.territory
-            .toLowerCase()
-            .includes(req.query.territory.toLowerCase()));
+        locations = locations.filter((location) => {
+            if (location.territory != null) {
+                return location.territory
+                    .toLowerCase()
+                    .includes(req.query.territory.toLowerCase());
+            }
+        });
     }
     if (req.query.region != undefined) {
-        locations = locations.filter((location) => location.region
-            .toLowerCase()
-            .includes(req.query.region.toLowerCase()));
+        locations = locations.filter((location) => {
+            if (location.region != null) {
+                return location.region
+                    .toLowerCase()
+                    .includes(req.query.region.toLowerCase());
+            }
+        });
     }
     const response = (0, dataMethods_1.buildResponse)(req, locations);
     res.json(response);
 });
 //organizations by id
-app.get("/api/organizations/:id", (req, res) => {
+app.get("/organizations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("organizations");
     data = (0, dataMethods_3.filterByID)(req, data);
     res.json(data);
 });
 //organizations by query
-app.get("/api/organizations", (req, res) => {
+app.get("/organizations", (req, res) => {
     let organizations = (0, dataMethods_2.getResource)("organizations");
     if (req.query.name != undefined) {
         organizations = organizations.filter((organization) => organization.name
@@ -112,21 +130,25 @@ app.get("/api/organizations", (req, res) => {
             .includes(req.query.name.toLowerCase()));
     }
     if (req.query.affiliation != undefined) {
-        organizations = organizations.filter((organization) => organization.affiliation
-            .toLowerCase()
-            .includes(req.query.affiliation.toLowerCase()));
+        organizations = organizations.filter((organization) => {
+            if (organization.affiliation != null) {
+                return organization.affiliation
+                    .toLowerCase()
+                    .includes(req.query.affiliation.toLowerCase());
+            }
+        });
     }
     const response = (0, dataMethods_1.buildResponse)(req, organizations);
     res.json(response);
 });
 //titans by id
-app.get("/api/titans/:id", (req, res) => {
+app.get("/titans/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("titans");
     data = (0, dataMethods_3.filterByID)(req, data);
     res.json(data);
 });
 //titans by query
-app.get("/api/titans", (req, res) => {
+app.get("/titans", (req, res) => {
     let titans = (0, dataMethods_2.getResource)("titans");
     const filteredTitans = [];
     //only way to filter titans is by allegiance, we have to search through the allegiance array of every Titan object
