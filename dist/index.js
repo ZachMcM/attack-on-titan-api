@@ -13,13 +13,13 @@ const dataMethods_3 = require("./dataMethods");
 const app = (0, express_1.default)();
 //default endpoints
 app.get("/", (req, res) => {
-    res.json([
-        "https://api.attackontitanapi.com/characters",
-        "https://api.attackontitanapi.com/episodes",
-        "https://api.attackontitanapi.com/locations",
-        "https://api.attackontitanapi.com/organizations",
-        "https://api.attackontitanapi.com/titans",
-    ]);
+    res.json({
+        characters: "https://api.attackontitanapi.com/characters",
+        episodes: "https://api.attackontitanapi.com/episodes",
+        locations: "https://api.attackontitanapi.com/locations",
+        organizations: "https://api.attackontitanapi.com/organizations",
+        titans: "https://api.attackontitanapi.com/titans",
+    });
 });
 //characters by id
 app.get("/characters/:id", (req, res) => {
