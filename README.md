@@ -24,4 +24,4 @@ The API is built using Node.js and Express.js and is designed to be easy to use 
 We hope you find this API useful for your projects and that it helps you explore the world of Attack on Titan in new and exciting ways!
 
 ### To Do
-- develop documentation website 
+- Develop documentation website 
