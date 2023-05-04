@@ -5,10 +5,10 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/a/ae/Attack_Titan_%28Anime%29_character_image_%28Eren_Jaeger%29.png/revision/latest/scale-to-width-down/350?cb=20170513212951",
     "height": "15m",
     "abilities": ["Future memory inheritance"],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/188",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/188",
     "former_inheritors": [
-      "https://attackontitanapi.com/api/characters/160",
-      "https://attackontitanapi.com/api/characters/98"
+      "https://api.attackontitanapi.com/characters/160",
+      "https://api.attackontitanapi.com/characters/98"
     ],
     "allegiance": ["Eldia"]
   },
@@ -23,14 +23,14 @@
       "Memory and body manipulation of subjects of ymir",
       "Telepathic communication with subjects of ymir"
     ],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/188",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/188",
     "former_inheritors": [
-      "https://attackontitanapi.com/api/characters/160",
-      "https://attackontitanapi.com/api/characters/110",
-      "https://attackontitanapi.com/api/characters/111",
-      "https://attackontitanapi.com/api/characters/112",
-      "https://attackontitanapi.com/api/characters/113",
-      "https://attackontitanapi.com/api/characters/124"
+      "https://api.attackontitanapi.com/characters/160",
+      "https://api.attackontitanapi.com/characters/110",
+      "https://api.attackontitanapi.com/characters/111",
+      "https://api.attackontitanapi.com/characters/112",
+      "https://api.attackontitanapi.com/characters/113",
+      "https://api.attackontitanapi.com/characters/124"
     ],
     "allegiance": ["Eldia"]
   },
@@ -40,8 +40,8 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/b/b2/Lara_Tybur_%28Anime%29_character_image_%28Titan%29.png/revision/latest/scale-to-width-down/350?cb=20210117211130",
     "height": "~15m",
     "abilities": ["Structural hardening", "Remote operation"],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/188",
-    "former_inheritors": ["https://attackontitanapi.com/api/characters/118"],
+    "current_inheritor": "https://api.attackontitanapi.com/characters/188",
+    "former_inheritors": ["https://api.attackontitanapi.com/characters/118"],
     "allegiance": ["Eldia", "Marley (formerly)"]
   },
   {
@@ -54,8 +54,8 @@
       "Immense size and strength",
       "Steam emission"
     ],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/1",
-    "former_inheritors": ["https://attackontitanapi.com/api/characters/95"],
+    "current_inheritor": "https://api.attackontitanapi.com/characters/1",
+    "former_inheritors": ["https://api.attackontitanapi.com/characters/95"],
     "allegiance": ["Eldia", "Marley (Formerly)"]
   },
   {
@@ -64,7 +64,7 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/c/cf/Armored_Titan_%28Anime%29_character_image_%28Reiner_Braun%29.png/revision/latest/scale-to-width-down/350?cb=20170507070844",
     "height": "15m",
     "abilities": ["Armored skin", "Hardening"],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/86",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/86",
     "former_inheritors": [],
     "allegiance": ["Marley"]
   },
@@ -74,7 +74,7 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/4/44/Female_Titan_%28Anime%29_character_image_%28Annie_Leonhart%29.png/revision/latest/scale-to-width-down/350?cb=20170708025046",
     "height": "14m",
     "abilities": ["Versatility", "Titan ", "Attraction", "Crystallization"],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/87",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/87",
     "former_inheritors": [],
     "allegiance": ["Marley"]
   },
@@ -89,8 +89,8 @@
       "Speech",
       "Can turn subjects of ymir into titans that he can crudely control (users with royal blood only)"
     ],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/184",
-    "former_inheritors": ["https://attackontitanapi.com/api/characters/97"],
+    "current_inheritor": "https://api.attackontitanapi.com/characters/184",
+    "former_inheritors": ["https://api.attackontitanapi.com/characters/97"],
     "allegiance": ["None", "Eldia (formerly)", "Marley (formerly)"]
   },
   {
@@ -103,11 +103,11 @@
       "Hardened claws",
       "Great speed and agility"
     ],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/89",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/89",
     "former_inheritors": [
-      "https://attackontitanapi.com/api/characters/91",
-      "https://attackontitanapi.com/api/characters/176",
-      "https://attackontitanapi.com/api/characters/96"
+      "https://api.attackontitanapi.com/characters/91",
+      "https://api.attackontitanapi.com/characters/176",
+      "https://api.attackontitanapi.com/characters/96"
     ],
     "allegiance": ["Marley"]
   },
@@ -122,7 +122,7 @@
       "Great speed",
       "Speech"
     ],
-    "current_inheritor": "https://attackontitanapi.com/api/characters/88",
+    "current_inheritor": "https://api.attackontitanapi.com/characters/88",
     "former_inheritors": [],
     "allegiance": ["Marley"]
   }
