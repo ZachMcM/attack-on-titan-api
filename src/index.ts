@@ -18,18 +18,18 @@ import { filterByID } from "./dataMethods";
 const app = express();
 
 //default endpoints
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({
-    characters: "https://api.attackontitanapi.com/characters",
-    episodes: "https://api.attackontitanapi.com/episodes",
-    locations: "https://api.attackontitanapi.com/locations",
-    organizations: "https://api.attackontitanapi.com/organizations",
-    titans: "https://api.attackontitanapi.com/titans",
+    characters: "https://attackontitanapi.com/api/characters",
+    episodes: "https:///attackontitanapi.com/api/episodes",
+    locations: "https://attackontitanapi.com/api/locations",
+    organizations: "https://attackontitanapi.com/api/organizations",
+    titans: "https://attackontitanapi.com/api/titans",
   });
 });
 
 //characters by id
-app.get("/characters/:id", (req, res) => {
+app.get("/api/characters/:id", (req, res) => {
   let data = getResource("characters");
   data = filterByID(req, data);
   console.log(data)
@@ -41,7 +41,7 @@ app.get("/characters/:id", (req, res) => {
 });
 
 //characters by query
-app.get("/characters", (req, res) => {
+app.get("/api/characters", (req, res) => {
   let characters: Character[] = getResource("characters");
 
   if (req.query.name != undefined) {
@@ -88,7 +88,7 @@ app.get("/characters", (req, res) => {
 });
 
 //episodes by id
-app.get("/episodes/:id", (req, res) => {
+app.get("/api/episodes/:id", (req, res) => {
   let data = getResource("episodes");
   data = filterByID(req, data);
   if (data.length == 1) {
@@ -99,7 +99,7 @@ app.get("/episodes/:id", (req, res) => {
 });
 
 //episodes by query
-app.get("/episodes", (req, res) => {
+app.get("/api/episodes", (req, res) => {
   let episodes: Episode[] = getResource("episodes");
 
   if (req.query.episode != undefined) {
@@ -122,7 +122,7 @@ app.get("/episodes", (req, res) => {
 });
 
 //locations by id
-app.get("/locations/:id", (req, res) => {
+app.get("/api/locations/:id", (req, res) => {
   let data = getResource("locations");
   data = filterByID(req, data);
   if (data.length == 1) {
@@ -133,7 +133,7 @@ app.get("/locations/:id", (req, res) => {
 });
 
 //locations by query
-app.get("/locations", (req, res) => {
+app.get("/api/locations", (req, res) => {
   let locations: Location[] = getResource("locations");
 
   if (req.query.name != undefined) {
@@ -168,7 +168,7 @@ app.get("/locations", (req, res) => {
 });
 
 //organizations by id
-app.get("/organizations/:id", (req, res) => {
+app.get("/api/organizations/:id", (req, res) => {
   let data = getResource("organizations");
   data = filterByID(req, data);
   if (data.length == 1) {
@@ -179,7 +179,7 @@ app.get("/organizations/:id", (req, res) => {
 });
 
 //organizations by query
-app.get("/organizations", (req, res) => {
+app.get("/api/organizations", (req, res) => {
   let organizations: Organization[] = getResource("organizations");
 
   if (req.query.name != undefined) {
@@ -205,7 +205,7 @@ app.get("/organizations", (req, res) => {
 });
 
 //titans by id
-app.get("/titans/:id", (req, res) => {
+app.get("/api/titans/:id", (req, res) => {
   let data = getResource("titans");
   data = filterByID(req, data);
   if (data.length == 1) {
@@ -216,7 +216,7 @@ app.get("/titans/:id", (req, res) => {
 });
 
 //titans by query
-app.get("/titans", (req, res) => {
+app.get("/api/titans", (req, res) => {
   let titans: Titan[] = getResource("titans");
 
   //only way to filter titans is by allegiance, we have to search through the allegiance array of every Titan object

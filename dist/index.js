@@ -12,17 +12,17 @@ const dataMethods_2 = require("./dataMethods");
 const dataMethods_3 = require("./dataMethods");
 const app = (0, express_1.default)();
 //default endpoints
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.json({
-        characters: "https://api.attackontitanapi.com/characters",
-        episodes: "https://api.attackontitanapi.com/episodes",
-        locations: "https://api.attackontitanapi.com/locations",
-        organizations: "https://api.attackontitanapi.com/organizations",
-        titans: "https://api.attackontitanapi.com/titans",
+        characters: "https://attackontitanapi.com/api/characters",
+        episodes: "https:///attackontitanapi.com/api/episodes",
+        locations: "https://attackontitanapi.com/api/locations",
+        organizations: "https://attackontitanapi.com/api/organizations",
+        titans: "https://attackontitanapi.com/api/titans",
     });
 });
 //characters by id
-app.get("/characters/:id", (req, res) => {
+app.get("/api/characters/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("characters");
     data = (0, dataMethods_3.filterByID)(req, data);
     console.log(data);
@@ -34,7 +34,7 @@ app.get("/characters/:id", (req, res) => {
     }
 });
 //characters by query
-app.get("/characters", (req, res) => {
+app.get("/api/characters", (req, res) => {
     let characters = (0, dataMethods_2.getResource)("characters");
     if (req.query.name != undefined) {
         characters = characters.filter((character) => character.name
@@ -69,7 +69,7 @@ app.get("/characters", (req, res) => {
     res.json(response);
 });
 //episodes by id
-app.get("/episodes/:id", (req, res) => {
+app.get("/api/episodes/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("episodes");
     data = (0, dataMethods_3.filterByID)(req, data);
     if (data.length == 1) {
@@ -80,7 +80,7 @@ app.get("/episodes/:id", (req, res) => {
     }
 });
 //episodes by query
-app.get("/episodes", (req, res) => {
+app.get("/api/episodes", (req, res) => {
     let episodes = (0, dataMethods_2.getResource)("episodes");
     if (req.query.episode != undefined) {
         episodes = episodes.filter((episode) => episode.episode
@@ -96,7 +96,7 @@ app.get("/episodes", (req, res) => {
     res.json(response);
 });
 //locations by id
-app.get("/locations/:id", (req, res) => {
+app.get("/api/locations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("locations");
     data = (0, dataMethods_3.filterByID)(req, data);
     if (data.length == 1) {
@@ -107,7 +107,7 @@ app.get("/locations/:id", (req, res) => {
     }
 });
 //locations by query
-app.get("/locations", (req, res) => {
+app.get("/api/locations", (req, res) => {
     let locations = (0, dataMethods_2.getResource)("locations");
     if (req.query.name != undefined) {
         locations = locations.filter((location) => location.name
@@ -136,7 +136,7 @@ app.get("/locations", (req, res) => {
     res.json(response);
 });
 //organizations by id
-app.get("/organizations/:id", (req, res) => {
+app.get("/api/organizations/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("organizations");
     data = (0, dataMethods_3.filterByID)(req, data);
     if (data.length == 1) {
@@ -147,7 +147,7 @@ app.get("/organizations/:id", (req, res) => {
     }
 });
 //organizations by query
-app.get("/organizations", (req, res) => {
+app.get("/api/organizations", (req, res) => {
     let organizations = (0, dataMethods_2.getResource)("organizations");
     if (req.query.name != undefined) {
         organizations = organizations.filter((organization) => organization.name
@@ -167,7 +167,7 @@ app.get("/organizations", (req, res) => {
     res.json(response);
 });
 //titans by id
-app.get("/titans/:id", (req, res) => {
+app.get("/api/titans/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("titans");
     data = (0, dataMethods_3.filterByID)(req, data);
     if (data.length == 1) {
@@ -178,7 +178,7 @@ app.get("/titans/:id", (req, res) => {
     }
 });
 //titans by query
-app.get("/titans", (req, res) => {
+app.get("/api/titans", (req, res) => {
     let titans = (0, dataMethods_2.getResource)("titans");
     //only way to filter titans is by allegiance, we have to search through the allegiance array of every Titan object
     if (req.query.name != undefined) {
