@@ -25,19 +25,14 @@ export const filterByID = (
   resourceData: Character[] | Episode[] | Location[] | Organization[] | Titan[]
 ): Character[] | Episode[] | Location[] | Organization[] | Titan[] => {
   //loops through each array and adds to the filtered array only if the ids match
-  const filteredResourceArr:
-    | Character[]
-    | Episode[]
-    | Location[]
-    | Organization[]
-    | Titan[] = [];
+  const filteredResourceArr: any= [];
 
   //if users want multiple characters they split the ids by commas and we split this into an array
   const idArr = req.params.id.split(",");
   for (let i = 0; i < resourceData.length; i++) {
     for (let j = 0; j < idArr.length; j++) {
       if (resourceData[i].id == parseInt(idArr[j])) {
-        filteredResourceArr[i] = resourceData[i];
+        filteredResourceArr.push(resourceData[i])
       }
     }
   }

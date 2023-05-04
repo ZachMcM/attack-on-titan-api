@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 app.get("/characters/:id", (req, res) => {
     let data = (0, dataMethods_2.getResource)("characters");
     data = (0, dataMethods_3.filterByID)(req, data);
+    console.log(data);
     if (data.length == 1) {
         res.json(data[0]);
     }
