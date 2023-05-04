@@ -12,7 +12,7 @@ const dataMethods_2 = require("./dataMethods");
 const dataMethods_3 = require("./dataMethods");
 const app = (0, express_1.default)();
 //default endpoints
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
     res.json({
         characters: "https://api.attackontitanapi.com/characters",
         episodes: "https://api./attackontitanapi.com/episodes",

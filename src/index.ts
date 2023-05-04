@@ -18,7 +18,7 @@ import { filterByID } from "./dataMethods";
 const app = express();
 
 //default endpoints
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   res.json({
     characters: "https://api.attackontitanapi.com/characters",
     episodes: "https://api./attackontitanapi.com/episodes",
