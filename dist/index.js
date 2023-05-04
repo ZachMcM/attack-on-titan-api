@@ -179,23 +179,13 @@ app.get("/titans/:id", (req, res) => {
 //titans by query
 app.get("/titans", (req, res) => {
     let titans = (0, dataMethods_2.getResource)("titans");
-    const filteredTitans = [];
     //only way to filter titans is by allegiance, we have to search through the allegiance array of every Titan object
-    if (req.query.allegiance != undefined) {
-        const allegianceArr = req.query.allegiance.split(",");
-        for (const titan of titans) {
-            for (let i = 0; i < titan.allegiance.length; i++) {
-                for (let j = 0; j < allegianceArr.length; j++) {
-                    if (titan.allegiance[i]
-                        .toLowerCase()
-                        .includes(allegianceArr[j].toLowerCase())) {
-                        filteredTitans.push(titan);
-                    }
-                }
-            }
-        }
+    if (req.query.name != undefined) {
+        titans = titans.filter((titan) => {
+            return titan.name.toLowerCase().includes(req.query.name.toLowerCase());
+        });
     }
-    const response = (0, dataMethods_1.buildResponse)(req, filteredTitans);
+    const response = (0, dataMethods_1.buildResponse)(req, titans);
     res.json(response);
 });
 app.listen(process.env.PORT, () => {
