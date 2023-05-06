@@ -5,7 +5,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/9/90/Anime_basement.png/revision/latest/scale-to-width-down/350?cb=20190610052624",
     "territory": "Shiganshina District",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/10"
@@ -16,7 +15,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/2/2b/Falco_and_Gabi_arrive_at_the_stables.png/revision/latest/scale-to-width-down/350?cb=20230318132617",
     "territory": "Dauper",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [
       "Braus family",
       "https://api.attackontitanapi.com/characters/131",
@@ -32,7 +30,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/9/9a/Karanese-ANIME.png/revision/latest/scale-to-width-down/350?cb=20170710122443",
     "territory": "Wall Rose",
     "region": "East",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/126",
       "https://api.attackontitanapi.com/characters/77"
@@ -46,7 +43,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/0/05/Capital_Mitras.png/revision/latest/scale-to-width-down/350?cb=20180729205629",
     "territory": "Wall Sina",
     "region": "Center",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/39"
@@ -57,7 +53,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/e/e1/Dauper_in_the_anime.jpg/revision/latest/scale-to-width-down/350?cb=20170410194648",
     "territory": "Wall Rose",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/27"
@@ -68,7 +63,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/2/2b/Ehrmich_District_in_the_anime.jpg/revision/latest/scale-to-width-down/350?cb=20170415181458",
     "territory": "Wall Sina",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/28"
@@ -79,7 +73,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/4/43/Paradis_Island_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20190621140722",
     "territory": "Eldia",
     "region": "Paradis Island Continental mainland (formerly)",
-    "status": "unknown",
     "notable_inhabitants": [
       "Subjects of Ymir",
       "Ackermann family",
@@ -96,7 +89,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/2/21/Background-0.jpg/revision/latest/scale-to-width-down/350?cb=20170228080309",
     "territory": "Wall Rose",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "unknown"
@@ -107,7 +99,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/c/c9/The_Forest_of_the_Giant_Trees.png/revision/latest/scale-to-width-down/350?cb=20130811103348",
     "territory": "Wall Maria",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/18"
@@ -118,7 +109,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/e/e7/Fort_Salta_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20230304181155",
     "territory": "Marley",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/88"
@@ -129,7 +119,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/e/e0/Fort_Slava.png/revision/latest/scale-to-width-down/350?cb=20201209142840",
     "territory": "Marley",
     "region": "Continental mainland",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/60"
@@ -140,7 +129,6 @@
     "img": "unknown",
     "territory": "Hizuru",
     "region": "Orient",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/63"
@@ -151,7 +139,6 @@
     "img": "unknown",
     "territory": "unknown",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/6"
@@ -162,7 +149,6 @@
     "img": "unknown",
     "territory": "Wall Rose",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "unknown"
@@ -173,7 +159,6 @@
     "img": "unknown",
     "territory": "Marley",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/88"
@@ -184,7 +169,6 @@
     "img": "unknown",
     "territory": "Wall Rose",
     "region": "West",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "unknown"
@@ -195,7 +179,6 @@
     "img": "unknown",
     "territory": "Marley",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/64"
@@ -206,7 +189,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/0/01/Liberio_City.png/revision/latest/scale-to-width-down/350?cb=20210125223659",
     "territory": "unknown",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/86",
       "https://api.attackontitanapi.com/characters/88",
@@ -240,8 +222,9 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/d/db/Marley_territory_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20230312000633",
     "territory": "unknown",
     "region": "Continental mainland",
-    "status": "unknown",
-    "notable_inhabitants": ["Eldians"],
+    "notable_inhabitants": [
+      "Eldians"
+    ],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/57"
   },
@@ -251,7 +234,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/1/1e/Mid_East_City.png/revision/latest/scale-to-width-down/350?cb=20210426065446",
     "territory": "Mid-East Allied Forces",
     "region": "Continental mainland",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/60"
@@ -262,7 +244,6 @@
     "img": "unknown",
     "territory": "Wall Rose",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "Distress"
@@ -273,7 +254,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/8/86/Odiha_on_the_map.png/revision/latest/scale-to-width-down/350?cb=20220321122128",
     "territory": "Marley",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/86"
@@ -284,8 +264,9 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/f/f9/Orvud_District_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20180909192025",
     "territory": "Wall Sina",
     "region": "North",
-    "status": "unknown",
-    "notable_inhabitants": ["https://api.attackontitanapi.com/characters/63"],
+    "notable_inhabitants": [
+      "https://api.attackontitanapi.com/characters/63"
+    ],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/45"
   },
@@ -295,7 +276,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/4/43/Paradis_Island_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20190621140722",
     "territory": "Eldia",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [
       "Subjects of Ymir",
       "Ackermann family",
@@ -312,7 +292,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/5/57/Ragako_in_the_anime.jpg/revision/latest/scale-to-width-down/350?cb=20170409114147",
     "territory": "Wall Rose",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/27"
@@ -323,7 +302,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/7/7f/The_Scouts_arrive_at_the_sea.png/revision/latest/scale-to-width-down/350?cb=20190701082623",
     "territory": "None",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/57"
@@ -334,7 +312,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/2/2e/Shiganshina_in_anime.png/revision/latest/scale-to-width-down/350?cb=20210322004639",
     "territory": "Wall Maria",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/188",
       "https://api.attackontitanapi.com/characters/2",
@@ -352,7 +329,6 @@
     "img": "unknown",
     "territory": "Wall Rose",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/3"
@@ -363,7 +339,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/f/f6/Stohess_anime.png/revision/latest/scale-to-width-down/350?cb=20170804041210",
     "territory": "Wall Sina",
     "region": "East",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/135",
       "https://api.attackontitanapi.com/characters/134",
@@ -383,7 +358,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/c/ca/Trost_anime.png/revision/latest/scale-to-width-down/350?cb=20170821022042",
     "territory": "Wall Rose",
     "region": "South",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/3",
       "https://api.attackontitanapi.com/characters/130",
@@ -399,7 +373,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/0/06/Underground_City_%28Anime%29.png/revision/latest/scale-to-width-down/350?cb=20170617171724",
     "territory": "Wall Sina",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [
       "https://api.attackontitanapi.com/characters/5",
       "https://api.attackontitanapi.com/characters/57",
@@ -415,7 +388,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/5/59/Eren_is_chained_in_the_Underground_Chapel.png/revision/latest/scale-to-width-down/350?cb=20180819220558",
     "territory": "Wall Rose",
     "region": "North",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/42"
@@ -426,7 +398,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/3/39/Utgard_Castle_in_the_anime.jpg/revision/latest/scale-to-width-down/350?cb=20170415223014",
     "territory": "Wall Rose",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/28"
@@ -437,7 +408,6 @@
     "img": "unknown",
     "territory": "Wall Rose",
     "region": "North",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "unknown"
@@ -448,7 +418,6 @@
     "img": "https://static.wikia.nocookie.net/shingekinokyojin/images/7/77/Walls.png/revision/latest/scale-to-width-down/350?cb=20170802115322",
     "territory": "Paradis Island",
     "region": "unknown",
-    "status": "unknown",
     "notable_inhabitants": [
       "Subjects of Ymir",
       "Ackermann family",
@@ -465,7 +434,6 @@
     "img": "unknown",
     "territory": "Wall Sina",
     "region": "West",
-    "status": "unknown",
     "notable_inhabitants": [],
     "notable_former_inhabitants": [],
     "debut": "https://api.attackontitanapi.com/episodes/26"
