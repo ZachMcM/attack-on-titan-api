@@ -82,7 +82,7 @@ req, content) => {
             const pageIndex = pageNum - 1;
             response.results = pagesArr[pageIndex];
             //correctly setting the prev_page and next_page properties based on the current page
-            if (pageNum <= pagesArr.length) {
+            if (pageNum < pagesArr.length) {
                 response.info.next_page = `${dns + req.path}?page=${pageNum + 1 + queriesString}`;
             }
             if (pageNum != 1) {
