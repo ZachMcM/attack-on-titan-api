@@ -1,6 +1,6 @@
-# Attack on Titan API
 ![the rumbling](public/The-Rumbling.avif)
 
+# Attack on Titan API
 Welcome to the [Attack on Titan API](https://www.attackontitanapi.com/). This repository provides a RESTful API that allows you to retrieve up to date information about characters, episodes, locations, organizations, and titans from the popular anime and manga series Attack on Titan The API is free and doesn't require a key.
 
 ## Getting Started
