@@ -32,7 +32,7 @@
       "https://api.attackontitanapi.com/characters/113",
       "https://api.attackontitanapi.com/characters/124"
     ],
-    "allegiance": ["Eldia"]
+    "allegiance": "Eldia"
   },
   {
     "id": 3,
