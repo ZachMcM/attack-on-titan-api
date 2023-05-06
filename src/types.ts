@@ -66,7 +66,7 @@ export type Titan = {
   abilities: string[];
   current_inheritor: string;
   former_inheritors: string[];
-  allegiance: string[];
+  allegiance: string;
 };
 
 export type DataResponse = {

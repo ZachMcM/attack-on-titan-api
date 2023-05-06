@@ -10,7 +10,7 @@
       "https://api.attackontitanapi.com/characters/160",
       "https://api.attackontitanapi.com/characters/98"
     ],
-    "allegiance": ["Eldia"]
+    "allegiance": "Eldia"
   },
   {
     "id": 2,
@@ -42,7 +42,7 @@
     "abilities": ["Structural hardening", "Remote operation"],
     "current_inheritor": "https://api.attackontitanapi.com/characters/188",
     "former_inheritors": ["https://api.attackontitanapi.com/characters/118"],
-    "allegiance": ["Eldia", "Marley (formerly)"]
+    "allegiance": "Eldia"
   },
   {
     "id": 4,
@@ -56,7 +56,7 @@
     ],
     "current_inheritor": "https://api.attackontitanapi.com/characters/1",
     "former_inheritors": ["https://api.attackontitanapi.com/characters/95"],
-    "allegiance": ["Eldia", "Marley (Formerly)"]
+    "allegiance": "Eldia"
   },
   {
     "id": 5,
@@ -66,7 +66,7 @@
     "abilities": ["Armored skin", "Hardening"],
     "current_inheritor": "https://api.attackontitanapi.com/characters/86",
     "former_inheritors": [],
-    "allegiance": ["Marley"]
+    "allegiance": "Marley"
   },
   {
     "id": 6,
@@ -76,7 +76,7 @@
     "abilities": ["Versatility", "Titan ", "Attraction", "Crystallization"],
     "current_inheritor": "https://api.attackontitanapi.com/characters/87",
     "former_inheritors": [],
-    "allegiance": ["Marley"]
+    "allegiance": "Marley"
   },
   {
     "id": 7,
@@ -91,7 +91,7 @@
     ],
     "current_inheritor": "https://api.attackontitanapi.com/characters/184",
     "former_inheritors": ["https://api.attackontitanapi.com/characters/97"],
-    "allegiance": ["None", "Eldia (formerly)", "Marley (formerly)"]
+    "allegiance": "None"
   },
   {
     "id": 8,
@@ -109,7 +109,7 @@
       "https://api.attackontitanapi.com/characters/176",
       "https://api.attackontitanapi.com/characters/96"
     ],
-    "allegiance": ["Marley"]
+    "allegiance": "Marley"
   },
   {
     "id": 9,
@@ -124,6 +124,6 @@
     ],
     "current_inheritor": "https://api.attackontitanapi.com/characters/88",
     "former_inheritors": [],
-    "allegiance": ["Marley"]
+    "allegiance": "Marley"
   }
 ]

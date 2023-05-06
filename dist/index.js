@@ -186,6 +186,11 @@ app.get("/titans", (req, res) => {
             return titan.name.toLowerCase().includes(req.query.name.toLowerCase());
         });
     }
+    if (req.query.allegiance != undefined) {
+        titans = titans.filter((titan) => {
+            return titan.allegiance.toLowerCase() == req.query.allegiance.toLowerCase();
+        });
+    }
     const response = (0, dataMethods_1.buildResponse)(req, titans);
     res.json(response);
 });

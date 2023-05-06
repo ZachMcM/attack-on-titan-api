@@ -226,6 +226,12 @@ app.get("/titans", (req, res) => {
     })
   }
 
+  if (req.query.allegiance != undefined) {
+    titans = titans.filter((titan: Titan) => {
+      return titan.allegiance.toLowerCase() == (<string>req.query.allegiance).toLowerCase()
+    })
+  }
+
   const response = buildResponse(req, titans);
 
   res.json(response);
