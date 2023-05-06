@@ -25,14 +25,14 @@ export const filterByID = (
   resourceData: Character[] | Episode[] | Location[] | Organization[] | Titan[]
 ): Character[] | Episode[] | Location[] | Organization[] | Titan[] => {
   //loops through each array and adds to the filtered array only if the ids match
-  const filteredResourceArr: any= [];
+  const filteredResourceArr: any = [];
 
   //if users want multiple characters they split the ids by commas and we split this into an array
   const idArr = req.params.id.split(",");
   for (let i = 0; i < resourceData.length; i++) {
     for (let j = 0; j < idArr.length; j++) {
       if (resourceData[i].id == parseInt(idArr[j])) {
-        filteredResourceArr.push(resourceData[i])
+        filteredResourceArr.push(resourceData[i]);
       }
     }
   }
@@ -81,10 +81,14 @@ export const buildResponse = (
       response.results = pagesArr[pageIndex];
       //correctly setting the prev_page and next_page properties based on the current page
       if (pageNum < pagesArr.length) {
-        response.info.next_page = `${dns + req.path}?page=${pageNum + 1 + queriesString}`;
-      }
-      if (pageNum != 1) {
-        response.info.prev_page = `${dns + req.path}?page=${pageNum - 1 + queriesString}`;
+        response.info.next_page = `${dns + req.path}?page=${
+          pageNum + 1 + queriesString
+        }`;
+        if (pageNum != 1) {
+          response.info.prev_page = `${dns + req.path}?page=${
+            pageNum - 1 + queriesString
+          }`;
+        }
       }
     } else {
       response.results = pagesArr[0];

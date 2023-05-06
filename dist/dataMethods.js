@@ -84,9 +84,9 @@ req, content) => {
             //correctly setting the prev_page and next_page properties based on the current page
             if (pageNum < pagesArr.length) {
                 response.info.next_page = `${dns + req.path}?page=${pageNum + 1 + queriesString}`;
-            }
-            if (pageNum != 1) {
-                response.info.prev_page = `${dns + req.path}?page=${pageNum - 1 + queriesString}`;
+                if (pageNum != 1) {
+                    response.info.prev_page = `${dns + req.path}?page=${pageNum - 1 + queriesString}`;
+                }
             }
         }
         else {
