@@ -463,7 +463,7 @@
     "birthplace": "Underground",
     "residence": "Wall Rose",
     "status": "Alive",
-    "occupation": "Thug[2]",
+    "occupation": "Thug",
     "groups": [
       { "name": "Scout Regiment", "sub_groups": ["Special Operations Squad"] }
     ],
