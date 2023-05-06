@@ -6,7 +6,7 @@
     "occupations": [],
     "notable_members": ["https://api.attackontitanapi.com/characters/183"],
     "notable_former_members": [],
-    "affiliation": null,
+    "affiliation": "unknown",
     "debut": "https://api.attackontitanapi.com/episodes/68"
   },
   {
@@ -55,7 +55,7 @@
     "occupations": [],
     "notable_members": [],
     "notable_former_members": [],
-    "affiliation": null,
+    "affiliation": "unknown",
     "debut": "https://api.attackontitanapi.com/episodes/69"
   },
   {
@@ -70,7 +70,7 @@
       "https://api.attackontitanapi.com/characters/189"
     ],
     "notable_former_members": [],
-    "affiliation": null,
+    "affiliation": "unknown",
     "debut": "https://api.attackontitanapi.com/episodes/71"
   },
   {
@@ -142,7 +142,7 @@
   {
     "id": 12,
     "name": "Reeves Company",
-    "img": null,
+    "img": "unknown",
     "occupations": [],
     "notable_members": [],
     "notable_former_members": [],
@@ -156,7 +156,7 @@
     "occupations": [],
     "notable_members": [],
     "notable_former_members": [],
-    "affiliation": null,
+    "affiliation": "unknown",
     "debut": "https://api.attackontitanapi.com/episodes/57"
   },
   {
@@ -194,7 +194,7 @@
   {
     "id": 16,
     "name": "Titan Biology Research Society",
-    "img": null,
+    "img": "unknown",
     "occupations": [],
     "notable_members": [],
     "notable_former_members": [],
