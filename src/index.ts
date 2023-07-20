@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors"
 
 dotenv.config();
 
@@ -16,6 +17,8 @@ import { getResource } from "./dataMethods";
 import { filterByID } from "./dataMethods";
 
 const app = express();
+
+app.use(cors())
 
 //default endpoints
 app.get("/", (req, res) => {
