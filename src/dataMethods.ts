@@ -8,10 +8,9 @@ import { Location } from "./types";
 import { Organization } from "./types";
 import { Titan } from "./types";
 import { Request } from "express";
-
-const dns = "https://api.attackontitanapi.com";
-const regex = /([&?])page=\d+/gi;
-const dataPerPage = 20;
+import { regex } from "../config/data";
+import { dataPerPage } from "../config/data";
+import { dns } from "../config/data";
 
 //returns the array of objects for the specified file
 export const getResource = (file: string) => {
