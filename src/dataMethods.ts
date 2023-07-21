@@ -8,9 +8,9 @@ import { Location } from "./types";
 import { Organization } from "./types";
 import { Titan } from "./types";
 import { Request } from "express";
-import { regex } from "../config/data";
-import { dataPerPage } from "../config/data";
-import { dns } from "../config/data";
+
+const dataPerPage = parseInt(process.env.DATA_PER_PAGE || "")
+const dns = process.env.DNS
 
 //returns the array of objects for the specified file
 export const getResource = (file: string) => {
@@ -45,6 +45,7 @@ export const buildResponse = (
   req: Request,
   content: Character[] | Episode[] | Location[] | Organization[] | Titan[]
 ): DataResponse => {
+  const regex = /([&?])page=\d+/gi;
   //formats a url string for the next and prev page properties
   let queriesString = req.originalUrl.replace(regex, "").replace(req.path, "");
 
